@@ -1,0 +1,119 @@
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background-color: #1D2028;
+  font-family: "PT Mono", monospace;
+}
+
+body header {
+  height: 80px;
+  background-color: #1D2028;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 50px;
+      grid-template-columns: 1fr 50px;
+  padding: 2rem 2rem 0 2rem;
+}
+
+body header nav {
+  color: #5f6574;
+}
+
+body header #title {
+  margin: 0;
+  color: #5f6574;
+  font-size: 2rem;
+  font-weight: normal;
+  font-family: "PT Mono", monospace;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+body header #sort {
+  color: #5f6574;
+  -ms-grid-column-align: right;
+      justify-self: right;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+body main {
+  padding: 2rem 2rem 0 2rem;
+}
+
+body main article {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.5rem 3rem 1fr;
+      grid-template-columns: 0.5rem 3rem 1fr;
+  grid-gap: 10px;
+  margin-bottom: 10px;
+  background-color: #1D2028;
+}
+
+body main article i {
+  color: #0594DE;
+  padding-top: 0.65rem;
+  font-size: 0.25rem;
+}
+
+body main article .time {
+  padding: 0;
+  background-color: #1D2028;
+  color: #0594DE;
+  font-family: "PT Mono", monospace;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+}
+
+body main article textarea {
+  padding: 0;
+  max-width: 100%;
+  height: 1.5rem;
+  background-color: #1D2028;
+  resize: none;
+  color: #bdc3d4;
+  font-family: "PT Mono", monospace;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  border: none;
+  outline: none;
+}
+
+body footer #newTask {
+  position: fixed;
+  bottom: 10px;
+  right: 2rem;
+  width: 100vw;
+  text-align: right;
+  padding: 20px 0px 20px 0px;
+  color: #5f6574;
+}
+
+body fa-plus-square {
+  width: 50px;
+  height: 50px;
+}
+
+/* ******* TODO ******
+
+- make bullet point smaller
+-fix alignment
+-find better monotype font
+- sift timeArea so it's much closer to bullet point
+- shift textArea so it's much closer to timeArea
+- add line under bullet point
+
+
+
+*/
+/*# sourceMappingURL=main.css.map */

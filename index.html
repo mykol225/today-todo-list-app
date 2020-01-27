@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" content="minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>App</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Mono&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ddb264611c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav><i class="fas fa-bars fa-lg" onclick="openMenu()"></i></nav>
+        <div></div>
+        <h1 id="title">Today
+            <p><input type="text" id="testInput"></p>
+        </h1>
+        <i id="sort" class="fas fa-sort-amount-up fa-lg" onclick="sortToggle()""></i>
+    </header>
+    <main id="main"></main>
+    <footer>
+        <i id="newTask" class="far fa-plus-square fa-3x" onclick="createNewTask()"></i>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

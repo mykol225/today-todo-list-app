@@ -1,0 +1,160 @@
+//naming convention refernce http://getbem.com/naming/ //
+//css structure convention refernce https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+
+
+//spacing unit variables
+$space-xxs: .25rem; //~4px
+$space-xs: .5rem; //~8px
+$space-sm: 1rem; //~16px
+$space-md: 1.5rem; //~24px
+$space-lg: 2rem; //~32px
+$space-xl: 3rem; //~48px
+
+$column-gap: .5rem; //~8px
+$column-width: 1.5rem; //~24px
+
+//breakpoint variables
+$break-xs: 28rem; //~448px
+$break-sm: 36rem; //~576px
+$break-mg: 48rem;//~768px
+$break-lg: 64rem; //~1024x
+$break-xl: 90rem; //~1440px
+
+//Color variables
+$baseColor: #1D2028;
+$lt-baseColor: saturate(lighten($baseColor, 65%), 5%); //increases saturation by 5%; lightens up by 65%
+$md-baseColor: desaturate(lighten($baseColor, 28%), 6%);
+$dk-baseColor: saturate(lighten($baseColor, 8%), 3%);
+$accentColor1: #d14f45;
+$accentColor2: #D1A245;
+$accentColor3: #01AE7D;
+$accentColor4: #0594DE;
+$accentColor5: #3A37EB;
+
+//Font variables
+$h1-size: $space-lg;
+$h1-weight: normal;
+$h1-line: $space-xl;
+$h1-family: 'PT Mono', monospace;
+
+$h4-size: $space-sm;
+$h4-weight: normal;
+$h4-line: $space-md;
+$h4-family: 'PT Mono', monospace;
+
+
+
+html {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    width: 100vw;
+    overflow-x:hidden
+  }
+
+body {
+    //background-image: url("Export.png"; background-size: 100%;
+    margin: 0;
+    background-color: $baseColor;
+    font-family: $h1-family;
+
+    
+    header {
+        height: 80px;
+        background-color: $baseColor; //$baseColor
+        display: grid;
+        grid-template-columns: 1fr 50px;
+        padding: $space-lg $space-lg 0 $space-lg;
+
+        nav {
+            color: $md-baseColor;
+        }
+
+        #title {
+            margin: 0;
+            color: $md-baseColor;
+            font-size: $h1-size;
+            font-weight: $h1-weight;
+            font-family: $h1-family;
+            align-self: end;
+        }
+
+        #sort {
+            color: $md-baseColor;
+            justify-self: right;
+            align-self: end;
+        }
+
+        
+    }
+
+    main {
+        padding: $space-lg $space-lg 0 $space-lg;
+
+        article {
+            display: grid;
+            grid-template-columns: $space-xs $space-xl 1fr;
+            grid-gap: 10px;
+            margin-bottom: 10px;
+            background-color: $baseColor;
+
+            i {
+                color: $accentColor4;
+                padding-top: (($space-md/2)-.1rem); //I want it to sit in the exact middle of the font's baseline and ascender 
+                font-size: ($h4-size/4);
+            }
+
+            .time {
+                padding: 0;
+                background-color: $baseColor;
+                color: $accentColor4;
+                font-family: $h4-family;
+                font-size: $h4-size;
+                border: none;
+                outline: none;
+            }
+
+            textarea {
+                padding: 0;
+                max-width: 100%;
+                height: $h4-line;
+                background-color: $baseColor;
+                resize: none;
+                color: $lt-baseColor;
+                font-family: $h4-family;
+                font-size: $h4-size;
+                line-height: $h4-line;
+                border: none;
+                outline: none;
+            }
+        }
+    }
+
+    footer #newTask {
+        position: fixed;
+        bottom: 10px;
+        right: $space-lg;
+        width: 100vw;
+        text-align: right;
+        padding: 20px 0px 20px 0px;
+        color: $md-baseColor;
+        
+    }
+    fa-plus-square {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+/* ******* TODO ******
+
+- make bullet point smaller
+-fix alignment
+-find better monotype font
+- sift timeArea so it's much closer to bullet point
+- shift textArea so it's much closer to timeArea
+- add line under bullet point
+
+
+
+*/
